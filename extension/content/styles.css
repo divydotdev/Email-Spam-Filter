@@ -1,0 +1,170 @@
+/* Smart Guard Gmail Specific Banner & Highlight Styles */
+
+/* Injected Inline Email Banner */
+.smart-guard-gmail-banner {
+  margin: 12px 0 16px 0 !important;
+  padding: 14px 18px !important;
+  border-radius: 10px !important;
+  font-family: 'Google Sans', Roboto, -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  animation: sgBannerFadeIn 0.3s ease-out !important;
+  border: 1px solid transparent !important;
+  z-index: 9999 !important;
+  clear: both !important;
+}
+
+.smart-guard-gmail-banner.sg-spam-banner {
+  background: #fef2f2 !important;
+  border-color: #fca5a5 !important;
+  color: #991b1b !important;
+}
+
+.smart-guard-gmail-banner.sg-ham-banner {
+  background: #f0fdf4 !important;
+  border-color: #86efac !important;
+  color: #166534 !important;
+}
+
+.sg-banner-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.sg-banner-icon {
+  font-size: 26px !important;
+}
+
+.sg-banner-title {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+}
+
+.sg-banner-sub {
+  font-size: 12px !important;
+  margin-top: 2px !important;
+  opacity: 0.9 !important;
+}
+
+.sg-banner-tags {
+  display: flex !important;
+  gap: 4px !important;
+  margin-top: 6px !important;
+  flex-wrap: wrap !important;
+}
+
+.sg-banner-tag {
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: #b91c1c !important;
+  border: 1px solid #f87171 !important;
+  font-weight: 600 !important;
+  padding: 2px 8px !important;
+  border-radius: 4px !important;
+  font-size: 11px !important;
+}
+
+.sg-banner-action {
+  background: #ffffff !important;
+  border: 1px solid currentColor !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  color: inherit !important;
+  transition: all 0.2s ease !important;
+}
+
+.sg-banner-action:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Floating Gmail Toast Banner */
+.smart-guard-floating-toast {
+  position: fixed !important;
+  top: 75px !important;
+  right: 25px !important;
+  z-index: 999999 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  padding: 14px 18px !important;
+  border-radius: 12px !important;
+  background: rgba(18, 24, 38, 0.94) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  max-width: 380px !important;
+  animation: sgSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+.smart-guard-floating-toast.sg-spam {
+  border-left: 5px solid #ef4444 !important;
+}
+
+.smart-guard-floating-toast.sg-ham {
+  border-left: 5px solid #10b981 !important;
+}
+
+/* Injected Trigger Word Highlights inside Gmail Email Body */
+mark.smart-guard-trigger {
+  background: rgba(239, 68, 68, 0.25) !important;
+  color: #dc2626 !important;
+  border-bottom: 2px dashed #ef4444 !important;
+  padding: 1px 4px !important;
+  border-radius: 3px !important;
+  font-weight: 600 !important;
+  cursor: help !important;
+  position: relative !important;
+}
+
+mark.smart-guard-trigger::after {
+  content: "⚠️ Suspicious Spam Term";
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  color: #f87171;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10000;
+}
+
+mark.smart-guard-trigger:hover::after {
+  opacity: 1;
+}
+
+@keyframes sgBannerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sgSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

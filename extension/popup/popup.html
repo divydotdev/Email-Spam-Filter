@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Guard Dashboard</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo">🛡️</div>
+        <div>
+          <h1>Smart Guard</h1>
+          <span class="version">v1.0.0 AI Security</span>
+        </div>
+      </div>
+      <div class="status-pill" id="statusPill">
+        <span class="dot"></span>
+        <span class="status-text">Checking...</span>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="tab-scan">🔍 Analyzer</button>
+      <button class="tab-btn" data-tab="tab-history">📜 History</button>
+      <button class="tab-btn" data-tab="tab-settings">⚙️ Settings</button>
+    </nav>
+
+    <!-- Tab 1: Live Analyzer -->
+    <main class="tab-content active" id="tab-scan">
+      <div class="card input-card">
+        <label for="textInput">Check Message or Web Text</label>
+        <textarea id="textInput" placeholder="Paste an email, SMS, or message text here to scan..." rows="3"></textarea>
+        <button id="scanBtn" class="btn btn-primary">
+          <span class="btn-text">Scan Content</span>
+          <div class="spinner hidden"></div>
+        </button>
+      </div>
+
+      <!-- Analysis Result Card -->
+      <div id="resultCard" class="card result-card hidden">
+        <div class="result-header">
+          <div class="result-badge" id="resultBadge">HAM / SAFE</div>
+          <div class="risk-badge" id="riskBadge">LOW RISK</div>
+        </div>
+
+        <div class="metric-row">
+          <div class="metric-item">
+            <span class="metric-label">Confidence Score</span>
+            <span class="metric-val" id="confidenceVal">99.8%</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-label">Classifier</span>
+            <span class="metric-val" id="classifierVal">TF-IDF Naive Bayes</span>
+          </div>
+        </div>
+
+        <div id="triggerSection" class="trigger-section hidden">
+          <span class="trigger-title">Suspicious Trigger Terms:</span>
+          <div class="trigger-tags" id="triggerTags"></div>
+        </div>
+
+        <div class="feedback-actions">
+          <span>Is this result incorrect?</span>
+          <button id="reportFeedbackBtn" class="btn-subtle">Report Error</button>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Bar -->
+      <div class="stats-bar">
+        <div class="stat-box">
+          <span class="stat-num" id="scannedTotal">0</span>
+          <span class="stat-desc">Scanned</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" id="spamTotal">0</span>
+          <span class="stat-desc">Spam Blocked</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" id="feedbackTotal">0</span>
+          <span class="stat-desc">Reports</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Tab 2: Recent History -->
+    <section class="tab-content" id="tab-history">
+      <div class="card history-card">
+        <div class="history-header">
+          <h3>Recent Scan Logs</h3>
+          <button id="clearHistoryBtn" class="btn-link">Clear</button>
+        </div>
+        <div id="historyList" class="history-list">
+          <div class="empty-state">No scans recorded yet.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: Settings -->
+    <section class="tab-content" id="tab-settings">
+      <div class="card settings-card">
+        <h3>System Settings</h3>
+        <div class="form-group">
+          <label for="apiUrlInput">FastAPI Backend Server URL</label>
+          <input type="text" id="apiUrlInput" value="http://127.0.0.1:8000">
+        </div>
+        <div class="form-group">
+          <label for="sensitivityRange">
+            Spam Detection Sensitivity: <span id="sensitivityVal">0.50</span>
+          </label>
+          <input type="range" id="sensitivityRange" min="0.1" max="0.9" step="0.05" value="0.5">
+          <div class="range-labels">
+            <span>Aggressive (0.1)</span>
+            <span>Balanced (0.5)</span>
+            <span>Strict (0.9)</span>
+          </div>
+        </div>
+        <button id="saveSettingsBtn" class="btn btn-secondary">Save Settings</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <span>Protected by Smart Guard AI</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

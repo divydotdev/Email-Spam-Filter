@@ -1,0 +1,38 @@
+# --- Email Newsletters, Substack & Daily Briefs ---
+ham	The Daily Brief by Zerodha. CCI wants to make India industries electric. Today we discuss the new initiative by the government to transition manufacturing units. Over 50 new companies have joined. Click here to read full newsletter or manage your subscription settings.
+ham	Morning Brew: Wall Street rallies as tech earnings beat expectations. Here is what you need to know before the opening bell today.
+ham	Substack Weekly Digest: Top stories in technology, science, and economics curated for you this week.
+ham	The Morning Context: Deep dive into the renewable energy sector in Asia. Analysis by our senior editors.
+ham	Hacker News Digest: Top 10 discussions on programming languages, distributed systems, and open source projects.
+ham	Finshots Daily: Why aviation turbine fuel prices are rising and how airlines are responding.
+ham	Medium Daily Digest: Recommended stories based on your reading history in Python, Machine Learning, and Web Development.
+ham	TechCrunch Minute: Venture capital investments in AI startups hit record high in Q3.
+ham	TLDR Tech: A byte-sized newsletter covering the most interesting tech stories and developer tools.
+
+# --- Transactional, Receipts & Account Alerts ---
+ham	Your invoice for Google Workspace subscription is now available. Amount: $12.00 debited from card ending in 4920.
+ham	Amazon.com: Your order has shipped! Tracking number 9400111899562537. Expected delivery date: Thursday by 8 PM.
+ham	GitHub: [Security Advisory] Dependabot detected a vulnerability in package lodash. Review the pull request.
+ham	Stripe Receipt: Payment of $29.00 to Vercel Inc. was successful. Thank you for your business.
+ham	Apple Receipt: Your subscription to iCloud+ with 50GB storage was renewed for $0.99.
+ham	Swiggy Order Receipt: Order #982104 from Burger King has been delivered. View itemized tax invoice.
+ham	Uber Trip Receipt: Total Rs 340.00. Thanks for riding with us. Driver rating: 5 stars.
+ham	Netflix: New sign-in detected on your account from Chrome on Windows. If this was you, no action is needed.
+ham	Steam: Thank you for your recent purchase. The items have been added to your Steam Library.
+ham	LinkedIn: 5 people viewed your profile this week. See who is looking at your experience and skills.
+
+# --- Professional, Work & Personal Conversations ---
+ham	Hi John, the meeting has been moved to 3 PM tomorrow. Please let me know if that works for your schedule.
+ham	Please find the project report and slide deck attached. Let me know if you have any feedback before the client call.
+ham	Reminder: Your dentist appointment is scheduled for Monday at 10 AM at City Dental Clinic.
+ham	Thanks for sending the contract documents. I will review them with legal and get back to you tomorrow afternoon.
+ham	The team sprint planning meeting will be held in Room 204 at 11 AM. Please update your Jira tickets.
+ham	Hi team, our production deployment is scheduled for tonight at 11 PM UTC. Expect 5 minutes of maintenance window.
+ham	Can we reschedule our sync call to Thursday afternoon? Let me know your availability.
+ham	The quarterly financial performance report is ready for executive review. Please send your comments by Friday.
+ham	Your password was successfully changed from your profile settings. If you did not make this change, contact IT support.
+ham	Here is the presentation we discussed during yesterday's meeting. Thanks everyone for the productive brainstorming.
+ham	Hi Mom, I reached the hotel safely. Will call you later tonight after the conference dinner.
+ham	Your flight booking has been confirmed with Indigo Airlines. 6E-204 from Delhi to Bengaluru.
+ham	Please remember to submit your semester project report before the deadline on Friday.
+ham	Thanks for your help debugging the API server issue yesterday. I really appreciate the quick turnaround.
